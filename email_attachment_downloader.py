@@ -76,7 +76,7 @@ try:
 
                 if 'attachment' in content_disposition and ATTACHMENT_TYPE in content_type or bool(filename):
                     if not filename:
-                        filename = f'unknown.{ATTACHMENT_TYPE}'
+                        filename = 'unknown'
                     attachment = part.get_payload(decode=True)
 
                     # Save the attachment to a file
